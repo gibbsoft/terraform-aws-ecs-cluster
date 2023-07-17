@@ -127,3 +127,14 @@ variable "associate_public_ip_address" {
   default     = false
   description = "Associate a public ip address with an instance in a VPC"
 }
+
+variable "health_check_type" {
+  type        = string
+  default     = "EC2"
+  description = "Type of healthcheck for ASG"
+
+  validation {
+    condition     = contains(["EC2", "ELB"], var.health_check_type)
+    error_message = "The health_check_type value must be either EC2 or ELB."
+  }
+}

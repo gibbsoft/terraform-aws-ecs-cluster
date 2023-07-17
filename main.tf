@@ -133,6 +133,7 @@ resource "aws_autoscaling_group" "main" {
   protect_from_scale_in = var.autoscaling_protect_from_scale_in
   termination_policies  = ["OldestLaunchConfiguration", "Default"]
   vpc_zone_identifier   = var.subnet_ids
+  health_check_type     = var.health_check_type
 
   metrics_granularity = "1Minute" // Only valid value
   enabled_metrics     = var.autoscaling_enabled_metrics

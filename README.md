@@ -74,13 +74,13 @@ This project constitutes a work of the United States Government and is not subje
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.74.0, < 5.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.74.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.74.0, < 5.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.74.0 |
 
 ## Modules
 
@@ -112,6 +112,7 @@ No modules.
 | <a name="input_autoscaling_protect_from_scale_in"></a> [autoscaling\_protect\_from\_scale\_in](#input\_autoscaling\_protect\_from\_scale\_in) | Allows setting instance protection. The Auto Scaling Group will not select instances with this setting for termination during scale in events. | `bool` | `true` | no |
 | <a name="input_aws_launch_configuration_name_prefix"></a> [aws\_launch\_configuration\_name\_prefix](#input\_aws\_launch\_configuration\_name\_prefix) | The prefix of the name of the AWS Launch configuration. If not specified, defaults to the value of "name-". | `string` | `""` | no |
 | <a name="input_desired_capacity"></a> [desired\_capacity](#input\_desired\_capacity) | The number of Amazon EC2 instances that should be running in the group. | `number` | `1` | no |
+| <a name="input_health_check_type"></a> [health\_check\_type](#input\_health\_check\_type) | Type of healthcheck for ASG | `string` | `"EC2"` | no |
 | <a name="input_iam_instance_profile"></a> [iam\_instance\_profile](#input\_iam\_instance\_profile) | n/a | `string` | n/a | yes |
 | <a name="input_image_id"></a> [image\_id](#input\_image\_id) | The EC2 image ID to launch.  If using AWS GovCloud, "ami-b1e0dad0" is equivalent. | `string` | `"ami-0e999cbd62129e3b1"` | no |
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | n/a | `string` | `"m5.large"` | no |
